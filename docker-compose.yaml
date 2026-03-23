@@ -4,9 +4,9 @@ services:
   app:
     user: "${USER_ID:-1000}"
     hostname: "${HOST_NAME:-emkademy}"
-    image: cybulde-template
+    image: cybulde-data
     platform: linux/amd64
-    container_name: cybulde-template-container
+    container_name: cybulde-data-container
     build:
       context: .
       dockerfile: ./docker/Dockerfile
@@ -15,9 +15,10 @@ services:
         USER_ID: "${USER_ID:-1000}"
     volumes:
       - ./:/app/
-      - ~/.config/gcloud/:/home/${USER_NAME:-kyuksel}/.config/gcloud
+      - ~/.config/gcloud/:/home/${USER_NAME}/.config/gcloud
+      - ~/.sh:/home/${USER_NAME} /.ssh
     ports:
-      - 8080:8080
+      - 8888:8888
 
     deploy:
       resources:
