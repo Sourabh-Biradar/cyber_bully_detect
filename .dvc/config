@@ -1,6 +1,3 @@
 [core]
     analytics = false
     autostage = true
-    remote = gsc-storage
-['remote "gsc-storage"']
-    url = gs://cybulde/data/raw
