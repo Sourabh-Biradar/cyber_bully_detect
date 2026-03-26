@@ -6,10 +6,12 @@
   3. twitter dataset : https://www.kaggle.com/datasets/andrewmvd/cyberbullying-classification
  
 - tools used :
-  1. DVC : for data version
-  2. git
-  3. poetry
-  4. docker
+  1. DVC : for data version control
+  2. git : for version control
+  3. poetry : for dependencies management
+  4. docker : for containerization
+  5. gcp : for cloud storage
+  5. makefile : for cmd shortcuts & workflow
 
 - cmds :
     - make version-data
